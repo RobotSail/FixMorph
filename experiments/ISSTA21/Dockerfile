@@ -1,5 +1,6 @@
 FROM rshariffdeen/fixmorph:16.04
-MAINTAINER Ridwan Shariffdeen <ridwan@comp.nus.edu.sg>
+LABEL AuthorName="Ridwan Shariffdeen"
+LABEL AuthorEmail="ridwan@comp.nus.edu.sg"
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     bc \

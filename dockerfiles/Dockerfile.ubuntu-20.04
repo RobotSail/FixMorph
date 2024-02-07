@@ -1,8 +1,9 @@
 FROM ubuntu:20.04
-MAINTAINER Ridwan Shariffdeen <ridwan@comp.nus.edu.sg>
+LABEL MAINTAINER='Ridwan Shariffdeen <ridwan@comp.nus.edu.sg>'
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     autoconf \
+    # doesnt have a direct equivalent
     apt-transport-https \
     autoconf-archive \
     autogen \
@@ -18,6 +19,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     nano \
     python \
     perl \
+    # this one doesnt have a direct equivalent
     pkg-config \
     software-properties-common \
     subversion \
@@ -77,5 +79,9 @@ ENV PATH="${PATH}:/opt/fixmorph/bin"
 # Tidy up the container
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
      rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# update global python to point to python3.7
+RUN rm /usr/bin/python && ln -s /usr/bin/python3.7 /usr/bin/python
+RUN rm /usr/bin/python3 && ln -s /usr/bin/python3.7 /usr/bin/python3
 
 ENTRYPOINT ["python3.7", "FixMorph.py"]

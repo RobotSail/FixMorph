@@ -1,0 +1,87 @@
+diff --git a/src/iotop.h b/src/iotop.h
+index 0048a59..64175c7 100644
+--- a/src/iotop.h
++++ b/src/iotop.h
+@@ -261,7 +261,7 @@ inline void arr_sort(struct xxxid_stats_arr *pa,int (*cb)(const void *a,const vo
+ 
+ inline void calc_total(struct xxxid_stats_arr *cs,double *read,double *write);
+ inline void calc_a_total(struct act_stats *act,double *read,double *write,double time_s);
+-inline void humanize_val(double *value,char *str,int allow_accum);
++inline void humanize_val(double *value,char *str,int allow_accum, char *dummy_var);
+ inline int iotop_sort_cb(const void *a,const void *b);
+ inline int create_diff(struct xxxid_stats_arr *cs,struct xxxid_stats_arr *ps,double time_s,uint64_t ts_c,filter_callback_w cb,int width,int *cnt);
+ inline int value2scale(double val,double mx);
+diff --git a/src/view_batch.c b/src/view_batch.c
+index 62dc3b8..0f83b9c 100644
+--- a/src/view_batch.c
++++ b/src/view_batch.c
+@@ -30,10 +30,10 @@ static inline void view_batch(struct xxxid_stats_arr *cs,struct xxxid_stats_arr
+ 	calc_total(cs,&total_read,&total_write);
+ 	calc_a_total(act,&total_a_read,&total_a_write,time_s);
+ 
+-	humanize_val(&total_read,str_read,1);
+-	humanize_val(&total_write,str_write,1);
+-	humanize_val(&total_a_read,str_a_read,0);
+-	humanize_val(&total_a_write,str_a_write,0);
++	humanize_val(&total_read,str_read,1, "");
++	humanize_val(&total_write,str_write,1, "");
++	humanize_val(&total_a_read,str_a_read,0, "");
++	humanize_val(&total_a_write,str_a_write,0, "");
+ 
+ 	printf(HEADER1_FORMAT,total_read,str_read,"",total_write,str_write,"");
+ 
+@@ -77,8 +77,8 @@ static inline void view_batch(struct xxxid_stats_arr *cs,struct xxxid_stats_arr
+ 		if (s->exited) // do not show exited processes in batch view
+ 			continue;
+ 
+-		humanize_val(&read_val,read_str,1);
+-		humanize_val(&write_val,write_str,1);
++		humanize_val(&read_val,read_str,1, "");
++		humanize_val(&write_val,write_str,1, "");
+ 
+ 		pw_name=u8strpadt(s->pw_name,10);
+ 
+diff --git a/src/view_curses.c b/src/view_curses.c
+index c2334e4..f1a87f5 100644
+--- a/src/view_curses.c
++++ b/src/view_curses.c
+@@ -733,10 +733,10 @@ static inline void view_curses(struct xxxid_stats_arr *cs,struct xxxid_stats_arr
+ 		hist_a_w[0]=total_a_write;
+ 	}
+ 
+-	humanize_val(&total_read,str_read,1);
+-	humanize_val(&total_write,str_write,1);
+-	humanize_val(&total_a_read,str_a_read,0);
+-	humanize_val(&total_a_write,str_a_write,0);
++	humanize_val(&total_read,str_read,1, "");
++	humanize_val(&total_write,str_write,1, "");
++	humanize_val(&total_a_read,str_a_read,0, "");
++	humanize_val(&total_a_write,str_a_write,0, "");
+ 
+ 	gr_width_h=gr_width;
+ 	if (maxy<10||maxx<(int)strlen(HEADER1_FORMAT)+2*(7-5+3-2+(!config.f.hidegraph?gr_width_h+1:0)-2)) {
+@@ -1066,8 +1066,8 @@ static inline void view_curses(struct xxxid_stats_arr *cs,struct xxxid_stats_arr
+ 				write_val=s->write_val;
+ 			}
+ 
+-			humanize_val(&read_val,read_str,1);
+-			humanize_val(&write_val,write_str,1);
++			humanize_val(&read_val,read_str,1, "");
++			humanize_val(&write_val,write_str,1, "");
+ 
+ 			pwt=esc_low_ascii(s->pw_name);
+ 			pw_name=u8strpadt(pwt,9);
+diff --git a/src/views.c b/src/views.c
+index 78bc076..9e1a3d1 100644
+--- a/src/views.c
++++ b/src/views.c
+@@ -213,7 +213,8 @@ inline int create_diff(struct xxxid_stats_arr *cs,struct xxxid_stats_arr *ps,dou
+ 	return cs->length;
+ }
+ 
+-inline void humanize_val(double *value,char *str,int allow_accum) {
++inline void humanize_val(double *value,char *str,int allow_accum, char *dummy_var) {
++	printf("dummy var: %s\n", dummy_var);
+ 	const char *u="BKMGTPEZY";
+ 	size_t p=0;
+ 

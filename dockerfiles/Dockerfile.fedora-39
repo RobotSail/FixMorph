@@ -1,0 +1,31 @@
+# Fedora 39 is the current stable release at the time of making
+# this dockerfile. Please update it as and when new releases are
+# made.
+FROM docker.io/fedora:39
+LABEL MAINTAINER='Oleg S <97077423+RobotSail@users.noreply.github.com>'
+
+RUN dnf update -y
+
+RUN dnf install -y autoconf automake \
+    # equivalent of apt-transport-https
+    dnf-plugins-core \ 
+    autoconf-archive \
+    autogen \
+    bear \
+    cmake \
+    curl \
+    flex \
+    git \
+    git-all \
+    # equivalent of google-perftools 
+    gperftools \
+    gperftools-devel \
+    gperftools-libs \
+    mercurial \
+    # equivalent of minisat
+    minisat2 \
+    nano \
+    python \
+    perl \
+
+

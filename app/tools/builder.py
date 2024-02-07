@@ -103,14 +103,16 @@ def apply_flags(build_command):
         c_flags_new = c_flags.replace("'", "") + " " + c_flags_old
         build_command = build_command.replace(c_flags_old, c_flags_new)
     elif "CFLAGS=" in build_command:
-        c_flags_old = (build_command.split("CFLAGS='")[1]).split("'")[0]
-        if "-fPIC" in c_flags_old:
-            c_flags = c_flags.replace("-static", "")
-        c_flags_new = c_flags.replace("'", "") + " " + c_flags_old
-        build_command = build_command.replace(c_flags_old, c_flags_new)
+        # c_flags_old = (build_command.split("CFLAGS='")[1]).split("'")[0]
+        # if "-fPIC" in c_flags_old:
+        #     c_flags = c_flags.replace("-static", "")
+        # c_flags_new = c_flags.replace("'", "") + " " + c_flags_old
+        # build_command = build_command.replace(c_flags_old, c_flags_new)
+        emitter.normal('not replacing any CFLAGS in build command')
     else:
-        new_command = f"make CC={CC} CFLAGS={c_flags}"
-        build_command = build_command.replace("make", new_command)
+        # new_command = f"make CC={CC} CFLAGS={c_flags}"
+        # build_command = build_command.replace("make", new_command)
+        emitter.normal('not replacing any CFLAGS in build command')
 
     if "XCXXFLAGS=" in build_command:
         c_flags_old = (build_command.split("XCXXFLAGS='")[1]).split("'")[0]
@@ -132,11 +134,16 @@ def apply_flags(build_command):
         cc_old = (build_command.split("XCC='")[1]).split("'")[0]
         build_command = build_command.replace(cc_old, CC)
     elif "CC=" in build_command:
-        cc_old = (build_command.split("CC='")[1]).split("'")[0]
-        build_command = build_command.replace(cc_old, CC)
+        try:
+            cc_old = (build_command.split("CC='")[1]).split("'")[0]
+            build_command = build_command.replace(cc_old, CC)
+        except Exception as e:
+            logger.error('could not replace value of CC in command ' + build_command + ': ' + str(e)) 
+            emitter.normal('not replacing any CC in build command')
     else:
-        new_command = "make CC=" + CC + " "
-        build_command = build_command.replace("make", new_command)
+        # new_command = "make CC=" + CC + " "
+        # build_command = build_command.replace("make", new_command)
+        emitter.normal('not replacing any CC in build command')
 
     if "XCXX=" in build_command:
         cc_old = (build_command.split("XCXX='")[1]).split("'")[0]
@@ -177,7 +184,8 @@ def build_project(project_path, build_command=None, verify=False):
         else:
             if not os.path.isfile(project_path + "/compile_commands.json"):
                 build_command = build_command.replace("make", "bear -- make")
-            if CC == "wllvm":
+            # make sure that CC has been defined 
+            if ('CC' in locals() and 'CC' in globals()) and CC == "wllvm":
                 build_command = remove_fsanitize(build_command)
             if "-j" not in build_command:
                 build_command = apply_flags(build_command)

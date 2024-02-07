@@ -1,0 +1,4 @@
+# these are the requirements which the 'bind' project
+# requires 
+ply
+GitPython

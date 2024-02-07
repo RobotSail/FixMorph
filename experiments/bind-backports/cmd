@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e -o pipefail
+
+CFLAGS="" python3.7 /FixMorph/FixMorph.py --conf=repair.conf

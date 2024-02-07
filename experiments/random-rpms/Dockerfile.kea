@@ -1,0 +1,23 @@
+FROM ubuntu:20.04 as builder
+
+USER root
+
+RUN apt update
+
+WORKDIR /kea
+
+RUN DEBIAN_FRONTEND=noninteractive apt install -y make gcc g++ git wget curl autoconf automake libtool \
+    openssl libssl-dev liblog4cplus-dev libboost-all-dev
+
+
+COPY . .
+
+# RUN autoreconf --install
+
+RUN ./configure
+
+RUN make 
+
+# RUN autoconf
+
+# RUN mkdir -p /judy/doc/man/man3

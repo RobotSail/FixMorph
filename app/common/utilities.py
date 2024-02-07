@@ -369,8 +369,6 @@ def extract_project_path(source_path):
 
 
 def generate_map_gumtree(file_a, file_b, output_file):
-    name_a = file_a.split("/")[-1]
-    name_b = file_b.split("/")[-1]
     emitter.normal("\tsource: " + file_a)
     emitter.normal("\ttarget: " + file_b)
     emitter.normal("\tgenerating ast map")
