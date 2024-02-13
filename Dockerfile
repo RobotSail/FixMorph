@@ -78,7 +78,7 @@ RUN cd /opt/radamsa; git checkout 30770f6e; make; make install
 ADD . /opt/fixmorph
 WORKDIR /opt/fixmorph
 RUN python${PYTHON_VERSION} -m pip --disable-pip-version-check --no-cache-dir install -r /opt/fixmorph/requirements.txt
-RUN python${PYTHON_VERSION} setup.py build_ext --inplace
+# RUN python${PYTHON_VERSION} setup.py build_ext --inplace
 ENV PATH="${PATH}:/opt/fixmorph/bin:/opt/llvm/build/bin"
 RUN ln -s /usr/bin/clang-17 /usr/bin/clang
 RUN ln -s /usr/bin/clang++-17 /usr/bin/clang++

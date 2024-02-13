@@ -39,3 +39,9 @@ test
 **/*.so
 **/*.c
 venv
+
+# XXX: do not commit this
+# ignore local notes
+notes.md
+
+experiments/bind-backports/bind

@@ -27,9 +27,6 @@ RUN echo "export VISUAL=vim" >> /root/.bashrc
 RUN echo "set number" >> /root/.vimrc
 RUN echo "set relativenumber" >> /root/.vimrc
 
-# make running the script easier
-RUN echo "python FixMorph.py --conf=repair.conf --debug --format=unified" > /FixMorph/cmd
-RUN chmod +x /FixMorph/cmd
 
 ARG PKG_NAME='iotop-c'
 ARG GIT_EMAIL='user@example.com'
@@ -38,7 +35,7 @@ ARG GIT_NAME='user'
 RUN git config --global user.email "${GIT_EMAIL}"
 RUN git config --global user.name "${GIT_NAME}"
 
-WORKDIR /FixMorph
+WORKDIR /opt/fixmorph
 
 ENV SRC_PATH_A="/dirs/${PKG_NAME}-a"
 ENV SRC_PATH_B="/dirs/${PKG_NAME}-b"
@@ -82,7 +79,9 @@ RUN printf 'path_a:%s\npath_b:%s\npath_c:%s\nconfig_command_a:%s\nconfig_command
     "${CONFIG_COMMAND_C}" \
     "${BUILD_COMMAND_A}" \
     "${BUILD_COMMAND_B}" \
-    "${BUILD_COMMAND_C}" > /FixMorph/repair.conf
+    "${BUILD_COMMAND_C}" > /opt/fixmorph/repair.conf
 
+COPY run.sh ./cmd
+RUN chmod +x ./cmd
 
-ENTRYPOINT bash
+CMD [ "./cmd" ]

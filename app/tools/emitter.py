@@ -18,7 +18,12 @@ WHITE = '\t\x1b[1;37m'
 
 PROG_OUTPUT_COLOR = '\t\x1b[0;30;47m'
 STAT_COLOR = '\t\x1b[0;32;47m'
-rows, columns = os.popen('stty size', 'r').read().split()
+rows, columns = 0, 0
+try:
+    rows, columns = os.popen('stty size', 'r').read().split()
+except ValueError as ve:
+    print("Error: " + str(ve))
+    rows, columns = 24, 80
 
 
 def write(print_message, print_color, new_line=True, prefix=None, indent_level=0):
