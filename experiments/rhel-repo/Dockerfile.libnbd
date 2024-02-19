@@ -1,0 +1,99 @@
+# Use Fedora 40 as the base image
+FROM fixmorph:local as fixmorph-installer
+
+FROM fedora:40 as system
+
+USER root 
+
+ENV HOME_PATH="/opt/fixmorph"
+
+COPY --from=fixmorph-installer "${HOME_PATH}" "${HOME_PATH}"
+WORKDIR "${HOME_PATH}"
+
+# Install the necessary dependencies
+RUN dnf update -y
+RUN dnf -y install gcc \
+    clang \
+    make \
+    bash \
+    autoconf \
+    automake \
+    ocaml \
+    ocaml-findlib \
+    gnutls-devel \
+    libxml2-devel \
+    fuse3-devel \
+    # libublk-devel \
+    bash-completion \
+    nbdkit \
+    # nbdkit-plugins \
+    # nbdkit-filters \
+    xorriso \
+    genisoimage \
+    # mkisofs \
+    libguestfs-tools-c \
+    libguestfs \
+    libguestfs-devel \
+    libtool \
+    wget \
+    git \
+    vim
+
+# enable vim keybinds
+ENV VISUAL='vim'
+RUN echo "set -o vi" >> /root/.bashrc
+RUN echo "export VISUAL=vim" >> /root/.bashrc
+
+# enable settings within vim
+RUN echo "set number" >> /root/.vimrc
+RUN echo "set relativenumber" >> /root/.vimrc
+
+ARG PKG_NAME='libnbd'
+ARG GIT_EMAIL='user@example.com'
+ARG GIT_NAME='user'
+
+RUN git config --global user.email "${GIT_EMAIL}"
+RUN git config --global user.name "${GIT_NAME}"
+
+# install golang 1.13
+RUN wget https://go.dev/dl/go1.13.15.linux-amd64.tar.gz
+RUN rm -rf /usr/local/go 
+RUN tar -C /usr/local -xzf go1.13.15.linux-amd64.tar.gz
+# add to path
+ENV PATH="${PATH}:/usr/local/go/bin"
+
+# configure installation paths
+ENV SRC_PATH_A="/dirs/${PKG_NAME}-a"
+ENV SRC_PATH_B="/dirs/${PKG_NAME}-b"
+ENV SRC_PATH_C="/dirs/${PKG_NAME}-c"
+
+# these commands do nothing
+ARG CONFIG_COMMAND_A="git submodule update --init; autoupdate; autoreconf -i; ./configure"
+ARG CONFIG_COMMAND_B="git submodule update --init; autoupdate; autoreconf -i; ./configure"
+ARG CONFIG_COMMAND_C="git submodule update --init; autoupdate; autoreconf -i; ./configure"
+
+ARG BUILD_COMMAND_A="make"
+ARG BUILD_COMMAND_C="make"
+ARG BUILD_COMMAND_B="make"
+
+
+COPY "./${PKG_NAME}" "${SRC_PATH_A}"
+COPY "./${PKG_NAME}" "${SRC_PATH_B}"
+COPY "./${PKG_NAME}" "${SRC_PATH_C}"
+
+# create a repair.conf file
+RUN printf 'path_a:%s\npath_b:%s\npath_c:%s\nconfig_command_a:%s\nconfig_command_b:%s\nconfig_command_c:%s\nbuild_command_a:%s\nbuild_command_b:%s\nbuild_command_c:%s\n' \
+    "${SRC_PATH_A}" \
+    "${SRC_PATH_B}" \
+    "${SRC_PATH_C}" \
+    "${CONFIG_COMMAND_A}" \
+    "${CONFIG_COMMAND_B}" \
+    "${CONFIG_COMMAND_C}" \
+    "${BUILD_COMMAND_A}" \
+    "${BUILD_COMMAND_B}" \
+    "${BUILD_COMMAND_C}" > "${HOME_PATH}/repair.conf"
+
+COPY run.sh ./cmd
+RUN chmod +x ./cmd
+
+CMD ["./cmd"]
