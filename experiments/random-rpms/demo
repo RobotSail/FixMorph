@@ -1,0 +1,119 @@
+#!/bin/bash
+
+set -e -o pipefail
+
+# define variables here
+OUTFILE_PATCH_NAME='backport-fixmorph.patch'
+WORKING_DIR='/home/osilkin/Programming/cve-gen-ai/FixMorph/experiments/random-rpms'
+UPSTREAM_DIR="${WORKING_DIR}/upstreams/iotop"
+DOWNSTREAM_DIR="${WORKING_DIR}/rpms/iotop-c/iotop-1.25"
+IMAGE='iotop-c-fixmorph:demo'
+PROJECT_NAME='iotop-c'
+FINAL_BACKPORT_FILE="${WORKING_DIR}/backport-file.patch"
+
+
+function get_latest_container_id() {
+    local latest_ctr=$(docker container ls --latest | tail -n 1)
+    local latest_id=$(echo "${latest_ctr}" | awk '{print $1}')
+    echo -n "${latest_id}"
+}
+
+function extract_patch() {
+    local container_id=$(get_latest_container_id)
+    local generated_patch='/opt/fixmorph/generated.patch'
+    local outfile="${WORKING_DIR}/${OUTFILE_PATCH_NAME}"
+    docker cp "${container_id}:${generated_patch}" "${outfile}"
+
+    # the generated patch has paths at the top of the file
+    # which use an absolute path to reference container-internal
+    # files. We need to remove these paths and replace them with
+    # generic a/ and b/ prefixes
+    # 
+    # Specifically, here is the top of one generated backport file:
+    # --- /dirs/iotop-c-c/src/configfile.c    2024-02-20 21:21:38.316985411 +0000
+    # +++ /dirs/iotop-c-c-patch//src/configfile.c     2024-02-20 21:21:38.430987518 +0000
+    # 
+    # This needs to be replaced with:
+    # --- a/src/configfile.c    2024-02-20 21:21:38.316985411 +0000
+    # +++ b/src/configfile.c    2024-02-20 21:21:38.430987518 +0000
+    sed -i 's/--- \/dirs\/iotop-c-c\//--- a\//g' "${outfile}"
+    sed -i 's/\+\+\+ \/dirs\/iotop-c-c-patch\/\//+++ b\//g' "${outfile}"
+}
+
+
+function apply_generated_patch_to_downstream() {
+    local patch="${WORKING_DIR}/${OUTFILE_PATCH_NAME}"
+    # check if file exists
+    if [ ! -f "${patch}" ]; then
+        # printf "Patch file '%s' does not exist. Extracting a new one...\n" "${patch}"
+        extract_patch
+    fi
+
+    # printf "Applying patch '%s' in directory '%s'\n" "${patch}" "${DOWNSTREAM_DIR}"
+    cp "${patch}" "${DOWNSTREAM_DIR}/${OUTFILE_PATCH_NAME}"
+    git -C "${DOWNSTREAM_DIR}" apply "${OUTFILE_PATCH_NAME}"
+    # printf "Successfully applied patch.\n"
+    printf "\nFiles that have been changed:\n---------------------------\n"
+    printf "%s\n---------------------------\n" "$(git -C "${DOWNSTREAM_DIR}" --no-pager diff --name-only)"
+}
+
+function remove_untracked_files() {
+    local repo_path="${1}"
+    git -C "rpms/iotop-c/iotop-1.25" ls-files --others --exclude-standard | while read -r file; do
+        local filepath="${repo_path}/${file}"
+        printf 'deleting file at path %s\n' "${filepath}"
+        rm -f "${filepath}"
+    done
+}
+
+function reset_repositories() {
+    local upstream_name=$(basename "${UPSTREAM_DIR}")
+    local downstream_name=$(basename "${DOWNSTREAM_DIR}")
+    # printf '[%s, upstream] Resetting repository to HEAD\n' "${upstream_name}"
+    printf '[upstream] ' "$(basename ${UPSTREAM_DIR})"
+    git -C "${UPSTREAM_DIR}" reset HEAD --hard 
+    remove_untracked_files "${UPSTREAM_DIR}"
+    # printf '[%s, downstream] Resetting repository to HEAD\n' "${upstream_name}"
+    printf '[downstream] ' "$(basename ${DOWNSTREAM_DIR})"
+    git -C "${DOWNSTREAM_DIR}" reset HEAD --hard
+    remove_untracked_files "${DOWNSTREAM_DIR}"
+
+}
+
+function generate_patch() {
+    reset_repositories
+    printf '\n'
+    docker run -it "${IMAGE}"
+    extract_patch
+}
+
+function export_downstream_backport() {
+    git --no-pager -C "${DOWNSTREAM_DIR}" diff > "${FINAL_BACKPORT_FILE}"
+}
+
+# Parse arguments and run subcommands
+case "${1}" in
+    generate)
+        generate_patch
+        ;;
+    extract)
+        extract_patch
+        ;;
+    # Add more subcommands here
+    apply)
+        apply_generated_patch_to_downstream
+        ;;
+    full)
+        generate_patch
+        apply_generated_patch_to_downstream
+        ;;
+    reset)
+        reset_repositories
+        ;;
+    export_backport)
+        export_downstream_backport
+        ;;
+    *)
+        echo "Invalid command. Available commands: extract, apply, generate, full, reset, export_backport"
+        ;;
+esac

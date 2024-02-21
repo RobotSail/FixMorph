@@ -19,7 +19,7 @@ spinner() {
 
 # Main function
 function run() {
-    printf " Channeling the force, please wait..."
+    echo -n " Channeling the force, please wait..."
     python3.11 FixMorph.py --conf=repair.conf --format=unified &> combined-output &
     local pid=$! # ID of the last job running in the background
 

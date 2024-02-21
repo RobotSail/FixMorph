@@ -1,0 +1,1437 @@
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/COMMIT_EDITMSG b/../../rpms/iotop-c/iotop-1.25/.git/COMMIT_EDITMSG
+new file mode 100644
+index 0000000..2e23b77
+--- /dev/null
++++ b/../../rpms/iotop-c/iotop-1.25/.git/COMMIT_EDITMSG
+@@ -0,0 +1 @@
++init commit
+diff --git a/./.git/config b/../../rpms/iotop-c/iotop-1.25/.git/config
+index 39ce948..515f483 100644
+--- a/./.git/config
++++ b/../../rpms/iotop-c/iotop-1.25/.git/config
+@@ -3,9 +3,3 @@
+ 	filemode = true
+ 	bare = false
+ 	logallrefupdates = true
+-[remote "origin"]
+-	url = https://github.com/Tomas-M/iotop
+-	fetch = +refs/heads/*:refs/remotes/origin/*
+-[branch "master"]
+-	remote = origin
+-	merge = refs/heads/master
+diff --git a/./.git/index b/../../rpms/iotop-c/iotop-1.25/.git/index
+index 0cbb786..823f609 100644
+Binary files a/./.git/index and b/../../rpms/iotop-c/iotop-1.25/.git/index differ
+diff --git a/./.git/logs/HEAD b/../../rpms/iotop-c/iotop-1.25/.git/logs/HEAD
+index 90e2e13..dec4e19 100644
+--- a/./.git/logs/HEAD
++++ b/../../rpms/iotop-c/iotop-1.25/.git/logs/HEAD
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 cea6d5c7a41f2e7a842d4f244532759142af98b0 Oleg S <97077423+RobotSail@users.noreply.github.com> 1708373650 -0500	clone: from https://github.com/Tomas-M/iotop
++0000000000000000000000000000000000000000 0f58b392a5a07895ff465ce8a1175d3fe5aff9f0 Oleg S <97077423+RobotSail@users.noreply.github.com> 1706910010 -0500	commit (initial): init commit
+diff --git a/./.git/logs/refs/heads/master b/../../rpms/iotop-c/iotop-1.25/.git/logs/refs/heads/master
+index 90e2e13..dec4e19 100644
+--- a/./.git/logs/refs/heads/master
++++ b/../../rpms/iotop-c/iotop-1.25/.git/logs/refs/heads/master
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 cea6d5c7a41f2e7a842d4f244532759142af98b0 Oleg S <97077423+RobotSail@users.noreply.github.com> 1708373650 -0500	clone: from https://github.com/Tomas-M/iotop
++0000000000000000000000000000000000000000 0f58b392a5a07895ff465ce8a1175d3fe5aff9f0 Oleg S <97077423+RobotSail@users.noreply.github.com> 1706910010 -0500	commit (initial): init commit
+diff --git a/./.git/logs/refs/remotes/origin/HEAD b/./.git/logs/refs/remotes/origin/HEAD
+deleted file mode 100644
+index 90e2e13..0000000
+--- a/./.git/logs/refs/remotes/origin/HEAD
++++ /dev/null
+@@ -1 +0,0 @@
+-0000000000000000000000000000000000000000 cea6d5c7a41f2e7a842d4f244532759142af98b0 Oleg S <97077423+RobotSail@users.noreply.github.com> 1708373650 -0500	clone: from https://github.com/Tomas-M/iotop
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/00/48a592dbb529d19dc0f99f9da2b21a92e7317f b/../../rpms/iotop-c/iotop-1.25/.git/objects/00/48a592dbb529d19dc0f99f9da2b21a92e7317f
+new file mode 100644
+index 0000000..13d5074
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/00/48a592dbb529d19dc0f99f9da2b21a92e7317f differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/05/759a9e2f20b0b0c797e4fc609bb06b16228ba2 b/../../rpms/iotop-c/iotop-1.25/.git/objects/05/759a9e2f20b0b0c797e4fc609bb06b16228ba2
+new file mode 100644
+index 0000000..6faefae
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/05/759a9e2f20b0b0c797e4fc609bb06b16228ba2 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/0f/58b392a5a07895ff465ce8a1175d3fe5aff9f0 b/../../rpms/iotop-c/iotop-1.25/.git/objects/0f/58b392a5a07895ff465ce8a1175d3fe5aff9f0
+new file mode 100644
+index 0000000..80647fb
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/0f/58b392a5a07895ff465ce8a1175d3fe5aff9f0 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/10/bff3434102b964ee854cce25518879b58391e5 b/../../rpms/iotop-c/iotop-1.25/.git/objects/10/bff3434102b964ee854cce25518879b58391e5
+new file mode 100644
+index 0000000..ba9f378
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/10/bff3434102b964ee854cce25518879b58391e5 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/1a/a2e0b2c6c2c930bc86d12d0860a3d9ad81278c b/../../rpms/iotop-c/iotop-1.25/.git/objects/1a/a2e0b2c6c2c930bc86d12d0860a3d9ad81278c
+new file mode 100644
+index 0000000..e3eea00
+--- /dev/null
++++ b/../../rpms/iotop-c/iotop-1.25/.git/objects/1a/a2e0b2c6c2c930bc86d12d0860a3d9ad81278c
+@@ -0,0 +1,3 @@
++xçT]s⁄Hºg˝äÆ‰%qI|%WWwòT…Ua†@$ÒìjëFhœÀ.Y≠Èﬂﬂà`;g'/ıÙt˜¨ïY£˚˛œŒoÌ,Áøôí.)à2“NÊíÏ_∏ûOÇ^´(·»zﬁ–Ïj+7Ö√õ·[Ù:›˜¿ÁZ§ïJÏ€™,Ó§>√ı:AØ”{\)4j⁄{^\»;k6Vl¡_sKÑ“‰Ó^XÍ£6RF[ dÈ¨\Wé ÑŒ⁄∆bk2ô◊M°“Y∏Ç¿"∑%L~x∏ûÆpMö¨PòWk%S]B‹¶Rîa]‡„f˙Ú8c√¨¬I£˚ …‹{≤%?£˜0‡»ÊÉ’ºÆlavM”[VY„ê⁄C_Î‹ìØRTf«6
++fcc˜R)¨	UIy•|p¯≈üf´·Ù_¬≈"ú∆∑}F∫¬[⁄”wπ›)…Ê8J+¥´Õ7£≈„√´h≈∑çÏqOGÀ%∆≥BÃ√EWìpÅ˘j1ü-G-,9ï&⁄“Ã€∞Ñåúê™dß∑ºªí©ÖÿÔ0%πg=)ﬂ–CÇ/ê
++eÙÊ‡ã«?›I2á6Œ«Ωï|Œ‘=∑<ëN[>~ÔbÃ9‹)éyÈx”L0ñπ+0V∆XüO≤tF˚∏	—Èuªù†˚Æ”ı±ZÜÏÊ¢ÌyÌœì∆ô›·&çV5l•¡˜0ë∫˙«Srùb+jÏÖ≠}O"Ωk¥é`”ºÙ,}´$ß(Î–dñ*ìﬁ%rNnÈ˚î◊Rß™ ó•À§iº◊2œ(Gí\O¢´aíp·≥—Uª°éßŸ¿•vÿJ=xƒ˚[Ò˜„”M4ù-í§ﬂ∞>Q~Ëyi!,.¢Y<õ'”—Ëc2YƒÉW⁄ºb(©í–nü‡O˙/üÎØ©¸_n8!NGôóÉÓœ({Ü˘ÁçGKöˇ<~ÙÙc„π·Fﬂã	˝ó.98¢≥rc¸º ˘?Œ<›ı/=m˘	"‹W
+\ No newline at end of file
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/32/7b188a1c93da9dbf345445b614466b1cd9d5f1 b/../../rpms/iotop-c/iotop-1.25/.git/objects/32/7b188a1c93da9dbf345445b614466b1cd9d5f1
+new file mode 100644
+index 0000000..41208a2
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/32/7b188a1c93da9dbf345445b614466b1cd9d5f1 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/3d/47e9ed5cf1099efd7c334d3191c21c9d698856 b/../../rpms/iotop-c/iotop-1.25/.git/objects/3d/47e9ed5cf1099efd7c334d3191c21c9d698856
+new file mode 100644
+index 0000000..f2f04ca
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/3d/47e9ed5cf1099efd7c334d3191c21c9d698856 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/49/4936e284ca90d664243ce8ef6bd5df9180d269 b/../../rpms/iotop-c/iotop-1.25/.git/objects/49/4936e284ca90d664243ce8ef6bd5df9180d269
+new file mode 100644
+index 0000000..e08c025
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/49/4936e284ca90d664243ce8ef6bd5df9180d269 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/4c/5778140cdc399b703183bff1693a45a6184c97 b/../../rpms/iotop-c/iotop-1.25/.git/objects/4c/5778140cdc399b703183bff1693a45a6184c97
+new file mode 100644
+index 0000000..91e0f7a
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/4c/5778140cdc399b703183bff1693a45a6184c97 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/4f/fed0c568b72bf03ea1a1401ad09c88377d661b b/../../rpms/iotop-c/iotop-1.25/.git/objects/4f/fed0c568b72bf03ea1a1401ad09c88377d661b
+new file mode 100644
+index 0000000..f3163e0
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/4f/fed0c568b72bf03ea1a1401ad09c88377d661b differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/51/fd62edfc4c929e67b0386fd57a177e9ff0dc69 b/../../rpms/iotop-c/iotop-1.25/.git/objects/51/fd62edfc4c929e67b0386fd57a177e9ff0dc69
+new file mode 100644
+index 0000000..40eabfb
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/51/fd62edfc4c929e67b0386fd57a177e9ff0dc69 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/62/dc3b80cb6e674f628c7b169975a0c31101fbf5 b/../../rpms/iotop-c/iotop-1.25/.git/objects/62/dc3b80cb6e674f628c7b169975a0c31101fbf5
+new file mode 100644
+index 0000000..16e9c86
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/62/dc3b80cb6e674f628c7b169975a0c31101fbf5 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/65/7c77ed2289b1d3001e90bbcbea977b388666a1 b/../../rpms/iotop-c/iotop-1.25/.git/objects/65/7c77ed2289b1d3001e90bbcbea977b388666a1
+new file mode 100644
+index 0000000..71c2df1
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/65/7c77ed2289b1d3001e90bbcbea977b388666a1 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/77/029314f93574ce4c355fd4949b9d7816f41f8e b/../../rpms/iotop-c/iotop-1.25/.git/objects/77/029314f93574ce4c355fd4949b9d7816f41f8e
+new file mode 100644
+index 0000000..278e0a7
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/77/029314f93574ce4c355fd4949b9d7816f41f8e differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/78/bc0765df2179baf4ae0b34accd2f631e8b7443 b/../../rpms/iotop-c/iotop-1.25/.git/objects/78/bc0765df2179baf4ae0b34accd2f631e8b7443
+new file mode 100644
+index 0000000..ec754b5
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/78/bc0765df2179baf4ae0b34accd2f631e8b7443 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/7a/44f435b2679a74726330ef7a7069f4216d1a1a b/../../rpms/iotop-c/iotop-1.25/.git/objects/7a/44f435b2679a74726330ef7a7069f4216d1a1a
+new file mode 100644
+index 0000000..169c1ed
+--- /dev/null
++++ b/../../rpms/iotop-c/iotop-1.25/.git/objects/7a/44f435b2679a74726330ef7a7069f4216d1a1a
+@@ -0,0 +1,3 @@
++xÖRMO‹0Âú_ÒïV™î.*P§ú⁄rB‚–JΩ!ÑÏÏÏ∆‡ÿ¡cÔvA¸w&v±BÂºô˜1÷÷kúü˛8p™ßá~AØ´ ª¶Üƒ›¯tPÆÌà\£W)‡&¨ΩÙêàc·_GØph≤~É>qî%8i¶øD|S⁄ØÈ#"ÚE≤THj¥Abvrå3|ïÔdVUw^ÛxØú≤€«	Zå˝*Gô!$«ıXùtr1’VEQüØ
++Ωa6ﬁÂF£q’∆ºE µ» †ı.íã∆õC¶6∑5≠À›FvTÂéAHV€¢X*cÎ•ƒÿ»“rq	6Û¨r´§V2òkÃ⁄aòIÊS?&Ö5ä√ãé⁄{ü¢H<õË√vRõx€‰c.9f‹œı˜“k◊‡“ôhî5èÑÚ
++ˆ W&vIœ[y∂.ÕÊFJ∆>cN¿F Ôµıóßß…⁄∑ù#<?Ô≥ˇN∆Ó‚ï5RpO®ÔˆQ(,}Ë'Å»Se√ü+ùûƒ(ˆº‰%
+\ No newline at end of file
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/85/121352e33416697c5f39f3839f7ba522461e54 b/../../rpms/iotop-c/iotop-1.25/.git/objects/85/121352e33416697c5f39f3839f7ba522461e54
+new file mode 100644
+index 0000000..b3362c0
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/85/121352e33416697c5f39f3839f7ba522461e54 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/98/409c0855a782195f5188a390cb9b463b94595c b/../../rpms/iotop-c/iotop-1.25/.git/objects/98/409c0855a782195f5188a390cb9b463b94595c
+new file mode 100644
+index 0000000..dbb0ba8
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/98/409c0855a782195f5188a390cb9b463b94595c differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/99/516e60138d62008930bd238cf90f4c6faa491e b/../../rpms/iotop-c/iotop-1.25/.git/objects/99/516e60138d62008930bd238cf90f4c6faa491e
+new file mode 100644
+index 0000000..63a2410
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/99/516e60138d62008930bd238cf90f4c6faa491e differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/9b/80835f0c2cb6e42bb9a362166ba00d310b3aff b/../../rpms/iotop-c/iotop-1.25/.git/objects/9b/80835f0c2cb6e42bb9a362166ba00d310b3aff
+new file mode 100644
+index 0000000..6abdb6f
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/9b/80835f0c2cb6e42bb9a362166ba00d310b3aff differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/9f/a85d48f836e02b888d8d29ec77805ca2d226db b/../../rpms/iotop-c/iotop-1.25/.git/objects/9f/a85d48f836e02b888d8d29ec77805ca2d226db
+new file mode 100644
+index 0000000..f65c59f
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/9f/a85d48f836e02b888d8d29ec77805ca2d226db differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/a1/b7ea48dfa69e860971ae150f6646a52d250b11 b/../../rpms/iotop-c/iotop-1.25/.git/objects/a1/b7ea48dfa69e860971ae150f6646a52d250b11
+new file mode 100644
+index 0000000..b23a5d8
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/a1/b7ea48dfa69e860971ae150f6646a52d250b11 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/b3/dc9bd04552c2eed3cefbf7f3bb6211841e4651 b/../../rpms/iotop-c/iotop-1.25/.git/objects/b3/dc9bd04552c2eed3cefbf7f3bb6211841e4651
+new file mode 100644
+index 0000000..9b94888
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/b3/dc9bd04552c2eed3cefbf7f3bb6211841e4651 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/c0/8bec3d19ad7e2510bcfca727144a898cbfc478 b/../../rpms/iotop-c/iotop-1.25/.git/objects/c0/8bec3d19ad7e2510bcfca727144a898cbfc478
+new file mode 100644
+index 0000000..063ea29
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/c0/8bec3d19ad7e2510bcfca727144a898cbfc478 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/c2/334e42da258cc17d068b1e30a53126c61257ee b/../../rpms/iotop-c/iotop-1.25/.git/objects/c2/334e42da258cc17d068b1e30a53126c61257ee
+new file mode 100644
+index 0000000..fe096d5
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/c2/334e42da258cc17d068b1e30a53126c61257ee differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/c3/8fe7dd9e6e65d03de96c7ae5d4476846b5b533 b/../../rpms/iotop-c/iotop-1.25/.git/objects/c3/8fe7dd9e6e65d03de96c7ae5d4476846b5b533
+new file mode 100644
+index 0000000..826d4a4
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/c3/8fe7dd9e6e65d03de96c7ae5d4476846b5b533 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/ca/ba1e6f0a0b0a87bc2c3827ef1d83404779740c b/../../rpms/iotop-c/iotop-1.25/.git/objects/ca/ba1e6f0a0b0a87bc2c3827ef1d83404779740c
+new file mode 100644
+index 0000000..b3785f0
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/ca/ba1e6f0a0b0a87bc2c3827ef1d83404779740c differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/cd/f4229011553e8d569d4cf9c6d1271dcc80f07d b/../../rpms/iotop-c/iotop-1.25/.git/objects/cd/f4229011553e8d569d4cf9c6d1271dcc80f07d
+new file mode 100644
+index 0000000..66d3e6c
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/cd/f4229011553e8d569d4cf9c6d1271dcc80f07d differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/d1/59169d1050894d3ea3b98e1c965c4058208fe1 b/../../rpms/iotop-c/iotop-1.25/.git/objects/d1/59169d1050894d3ea3b98e1c965c4058208fe1
+new file mode 100644
+index 0000000..feec64d
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/d1/59169d1050894d3ea3b98e1c965c4058208fe1 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/d5/3a5672764f0fcefdb166bb470c400fba45f8d6 b/../../rpms/iotop-c/iotop-1.25/.git/objects/d5/3a5672764f0fcefdb166bb470c400fba45f8d6
+new file mode 100644
+index 0000000..b9583a8
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/d5/3a5672764f0fcefdb166bb470c400fba45f8d6 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/e9/1f1ea01d0eede85aa4d9d9ec93768051dd3c5d b/../../rpms/iotop-c/iotop-1.25/.git/objects/e9/1f1ea01d0eede85aa4d9d9ec93768051dd3c5d
+new file mode 100644
+index 0000000..fef1f9b
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/e9/1f1ea01d0eede85aa4d9d9ec93768051dd3c5d differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/eb/0a4cf277912d5c8027254b4674c0a23db5572e b/../../rpms/iotop-c/iotop-1.25/.git/objects/eb/0a4cf277912d5c8027254b4674c0a23db5572e
+new file mode 100644
+index 0000000..539bf07
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/eb/0a4cf277912d5c8027254b4674c0a23db5572e differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/ef/b7cb1fe58e048b37770ade00d3387536d00675 b/../../rpms/iotop-c/iotop-1.25/.git/objects/ef/b7cb1fe58e048b37770ade00d3387536d00675
+new file mode 100644
+index 0000000..e66e232
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/ef/b7cb1fe58e048b37770ade00d3387536d00675 differ
+diff --git a/../../rpms/iotop-c/iotop-1.25/.git/objects/f7/b205d9ff1be3796c0f0f4a226100b7c803d5ec b/../../rpms/iotop-c/iotop-1.25/.git/objects/f7/b205d9ff1be3796c0f0f4a226100b7c803d5ec
+new file mode 100644
+index 0000000..b5ce667
+Binary files /dev/null and b/../../rpms/iotop-c/iotop-1.25/.git/objects/f7/b205d9ff1be3796c0f0f4a226100b7c803d5ec differ
+diff --git a/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.idx b/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.idx
+deleted file mode 100644
+index 15e91bf..0000000
+Binary files a/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.idx and /dev/null differ
+diff --git a/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.pack b/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.pack
+deleted file mode 100644
+index 65adc0e..0000000
+Binary files a/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.pack and /dev/null differ
+diff --git a/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.rev b/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.rev
+deleted file mode 100644
+index 5b2864f..0000000
+Binary files a/./.git/objects/pack/pack-2f8f4421fdc14c1475a2f3e7bbe9c885855b132e.rev and /dev/null differ
+diff --git a/./.git/packed-refs b/./.git/packed-refs
+deleted file mode 100644
+index d05784c..0000000
+--- a/./.git/packed-refs
++++ /dev/null
+@@ -1,40 +0,0 @@
+-# pack-refs with: peeled fully-peeled sorted 
+-cea6d5c7a41f2e7a842d4f244532759142af98b0 refs/remotes/origin/master
+-6c4b31457cb868a6ab6d60ac00de2857de352acd refs/remotes/origin/suites/bookworm
+-92fe2688df97e35b562a4f4b6e32c2989d6fa0e6 refs/remotes/origin/suites/bookworm-backport
+-4d70e328f5ee1b446603684a90f8a80957a770e1 refs/remotes/origin/suites/bullseye
+-48d82a3b3b978a25ab661517a84522535b4b9f3e refs/remotes/origin/suites/bullseye-backport
+-6f79791982a338df811c65d3a0ac6a3ef0f864a1 refs/remotes/origin/suites/buster-backport
+-fa3f227b5b4e60df453cb03ba93c0ec2de268bed refs/tags/v1.1
+-^09b72ba8cce071f8affbb0016107f8237c347dab
+-e015ebd168e8471de2bf5e65f0752eb9ba7ee859 refs/tags/v1.10
+-2e95ec0219c7c1688e929829d99cd90fb7182218 refs/tags/v1.11
+-a3ff60386b041d31abe37609166f65651034fba3 refs/tags/v1.12
+-880caf24782138a74abae5f027526ecdc7e62735 refs/tags/v1.14
+-6013cfb18a65b2866431fe141c0b6f5dc9f62d63 refs/tags/v1.15
+-d2aa563e0c0852f664ee915c91e0e50ca757217c refs/tags/v1.16
+-0fe8cf865fbadc04803aa7e26fec97ac6c6fcada refs/tags/v1.17
+-d3df11c6736b052a24d6c30c2c1826caacbd6d0c refs/tags/v1.18
+-f617674bdf2a09675b52421663feafc926a0f88f refs/tags/v1.19
+-^887b987575cbbd066dfc6e65781c29b0baf0bd90
+-792464c18c26578cce9b040255b1a1bb3d2a3f4b refs/tags/v1.2
+-58fd3a651239dee71734f0302d1e55e28d9e4547 refs/tags/v1.20
+-^57319a9dd8fd166f20938aa226acd30bd3219335
+-b12c370c6f495d717adecfe6af0f4920c8e43834 refs/tags/v1.21
+-47668a272e7d09df19c52d97decdbe8cfc755932 refs/tags/v1.22
+-^610515cb13f082c288e7d01c233a1de6bfd418c1
+-9951d0ee43d476b08ecc285226052a2d66039dda refs/tags/v1.23
+-^bbf398a63ebc4edaf478bcaf6073754eb2091f3e
+-127fa40ac3d24f83ceb94a41dd06cb91faac7b63 refs/tags/v1.24
+-^ce72e06be225945d6a98ad2aef4afd5e1b5e65db
+-f9f41d85d615e667b1e958ab7c11564cae0d83b1 refs/tags/v1.25
+-^9d60bb7e262e0d41b0aa3bcfaa806fa4f42e548a
+-81b1645a996594965881db18f45823d565bf87f9 refs/tags/v1.26
+-^b15743b04bb04ff1fc6e197d21ba30365349edcb
+-29820d6473d765788819d21d810424a70de08a60 refs/tags/v1.3
+-f590c2de99d3e9b58fbd6514284145b8eaf39dfb refs/tags/v1.4
+-678a074f48ea6865c09f488e25a418a1b9706eef refs/tags/v1.5
+-71d2919363271de004465753cff1796640339680 refs/tags/v1.6
+-ff573d3f1f59cf62a1d4b0020dd3f4df6f84a261 refs/tags/v1.7
+-9e5e0c22a898376f49c63d506466208ba39194f9 refs/tags/v1.8
+-a63a4902ee88ececea84a0e96959a8c69ff287c4 refs/tags/v1.9
+diff --git a/./.git/refs/heads/master b/../../rpms/iotop-c/iotop-1.25/.git/refs/heads/master
+index b335ad0..e5c5f8f 100644
+--- a/./.git/refs/heads/master
++++ b/../../rpms/iotop-c/iotop-1.25/.git/refs/heads/master
+@@ -1 +1 @@
+-cea6d5c7a41f2e7a842d4f244532759142af98b0
++0f58b392a5a07895ff465ce8a1175d3fe5aff9f0
+diff --git a/./.git/refs/remotes/origin/HEAD b/./.git/refs/remotes/origin/HEAD
+deleted file mode 100644
+index 6efe28f..0000000
+--- a/./.git/refs/remotes/origin/HEAD
++++ /dev/null
+@@ -1 +0,0 @@
+-ref: refs/remotes/origin/master
+diff --git a/./.gitignore b/./.gitignore
+deleted file mode 100644
+index d1d525f..0000000
+--- a/./.gitignore
++++ /dev/null
+@@ -1,3 +0,0 @@
+-bld/*
+-*.swp
+-iotop
+diff --git a/./LICENSE b/../../rpms/iotop-c/iotop-1.25/LICENSE
+index 39c20f8..9b80835 100644
+--- a/./LICENSE
++++ b/../../rpms/iotop-c/iotop-1.25/LICENSE
+@@ -1,6 +1,6 @@
+ iotop - interactive monitor of Linux IO activity
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+diff --git a/./Makefile b/../../rpms/iotop-c/iotop-1.25/Makefile
+index 594f223..7702931 100644
+--- a/./Makefile
++++ b/../../rpms/iotop-c/iotop-1.25/Makefile
+@@ -7,7 +7,7 @@
+ # SPDX-License-Identifier: GPL-2.0-or-later
+ #
+ # Copyright (C) 2014  Vyacheslav Trushkin
+-# Copyright (C) 2020-2024  Boian Bonev
++# Copyright (C) 2020-2023  Boian Bonev
+ #
+ # This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ #
+diff --git a/./README.md b/../../rpms/iotop-c/iotop-1.25/README.md
+index 8211582..a1b7ea4 100644
+--- a/./README.md
++++ b/../../rpms/iotop-c/iotop-1.25/README.md
+@@ -72,15 +72,6 @@ Use the following command:
+     sudo xbps-install iotop-c
+ </details>
+ 
+-<details>
+-  <summary>Arch Linux</summary>
+-&nbsp;  
+-
+-Use the following command:
+-    
+-    sudo pacman -S iotop-c
+-</details>
+-
+ ## How to build from source
+ Please note that the installation and the usage of this program require root access.
+ 
+@@ -206,8 +197,6 @@ cd iotop && git checkout master && git pull && make clean && make -j
+         --show-exited      show exited processes
+     -l, --no-color         do not colorize values
+         --color            colorize values
+-    -T, --hide-time        hide current time
+-        --show-time        show current time
+         --si               use SI units of 1000 when printing values
+         --no-si            use non-SI units of 1024 when printing values
+         --threshold=1..10  threshold to switch to next unit
+@@ -235,7 +224,6 @@ The iotop community gathers in #iotop on libera.chat:
+ 
+ Notable contributions (ordered by time of last contribution):
+ 
+--   Christian Heusel &lt;[christian@heusel.eu](mailto:christian@heusel.eu)&gt; - Arch Linux packaging and testing
+ -   Leah Neukirchen &lt;[leah@vuxu.org](mailto:leah@vuxu.org)&gt; - Void Linux packaging and testing
+ -   Vitaly Chikunov &lt;[vt@altlinux.org](mailto:vt@altlinux.org)&gt; - ALT Linux packaging and testing
+ -   Matteo Bernardini &lt;[ponce@slackbuilds.org](mailto:ponce@slackbuilds.org)&gt; - SlackBuilds packaging and testing
+diff --git a/../../rpms/iotop-c/iotop-1.25/TODO b/../../rpms/iotop-c/iotop-1.25/TODO
+new file mode 100644
+index 0000000..4c57781
+--- /dev/null
++++ b/../../rpms/iotop-c/iotop-1.25/TODO
+@@ -0,0 +1,29 @@
++
++--- history of finished TODO items ---
++
++- Show prio of processes with threads as !be/4
++- Third mode proc+threads, to show threads under the process [change the threads mode instead of adding 3rd mode]
++- Add some gap between pseudo-graph and command line; use the gap to visually group threads of the same process
++- Aggregate thread data in process mode
++- Edit pid/user filters from interactive mode
++- Let 0 show all columns
++- Scrolling for the main view by UP/DOWN/PGUP/PGDN
++- Document exited threads/process display
++- Document the display of processes with different prio (e.g. !be/4)
++- Document the sorting order in thread view (threads always go after their main process)
++- Document pid/user filters interactive interface
++- Document 0 shows all columns
++- Document -u +123 command line
++- Document scrolling
++- Add scroll bar
++- Rework help to be like popup window
++- Add all missing keys to help window
++- Freezed, scrollable view of procs/threads for ionice selection (abandoned idea - exited processes should be kept track of)
++- ESC key close the help dialog
++- let the warning window about missing task_delayacct be closed by any key press and reappear on state change
++- add a small red indicator for missing kernel support for swapin/io
++- mask swapin/io columns and io graph data source if kernel support is disabled
++- do not sort on masked columns but continue to sort on hidden ones
++- add read/write/read+write data sources for the graph
++- add a toggle to select graph data source (as a side effect option 'only' will use the same)
++- restore some form of visible help on the bottom
+diff --git a/../../rpms/iotop-c/iotop-1.25/archlinux/PKGBUILD b/../../rpms/iotop-c/iotop-1.25/archlinux/PKGBUILD
+new file mode 100644
+index 0000000..8512135
+--- /dev/null
++++ b/../../rpms/iotop-c/iotop-1.25/archlinux/PKGBUILD
+@@ -0,0 +1,34 @@
++# Contributor: Rumen Jekov <rvjekov@gmail.com>
++# Maintainer: Rumen Jekov <rvjekov@gmail.com>
++# Maintainer: Boian Bonev <bbonev@ipacct.com>
++
++pkgname=iotop-c
++pkgver=1.25
++pkgrel=1
++pkgdesc="simple top-like I/O monitor (implemented in C)"
++arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'ppc64le')
++url="https://github.com/Tomas-M/iotop"
++license=('GPL2')
++depends=('ncurses')
++makedepends=('pkgconf')
++conflicts=('iotop' 'iotop-git')
++provides=('iotop')
++source=("${url}/releases/download/v${pkgver}/iotop-${pkgver}.tar.xz" "${url}/releases/download/v${pkgver}/iotop-${pkgver}.tar.xz.asc")
++validpgpkeys=('BA60BC20F37E59444D6D25001365720913D2F22D')
++md5sums=('SKIP' 'SKIP')
++
++prepare() {
++	cd iotop-${pkgver}
++	sed -i 's/sbin/bin/g' Makefile
++}
++
++build() {
++	cd iotop-${pkgver}
++	make DESTDIR="${pkgdir}" V=1
++}
++
++package() {
++	cd iotop-${pkgver}
++	unset PREFIX
++	make DESTDIR="${pkgdir}" install
++}
+diff --git a/./debian/changelog b/./debian/changelog
+deleted file mode 100644
+index 80296c5..0000000
+--- a/./debian/changelog
++++ /dev/null
+@@ -1,158 +0,0 @@
+-iotop-c (1.26-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.26
+-    - Clock in upper right corner
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Sat, 03 Feb 2024 13:45:39 +0000
+-
+-iotop-c (1.25-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.25
+-    - Fix ESC makes iotop busy loop
+-    - Fix the logic in 'only' option
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Sat, 14 Oct 2023 08:49:48 +0000
+-
+-iotop-c (1.24-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.24
+-    - Fix a bug with graphs in ASCII mode
+-    - Show the status of the configuration in the help window
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Sat, 30 Sep 2023 23:04:47 +0000
+-
+-iotop-c (1.23-1) unstable; urgency=medium
+-
+-  [ Debian Janitor ]
+-  * Re-export upstream signing key without extra signatures.
+-  * Fix day-of-week for changelog entry 1.22-1.
+-  * Update standards version to 4.6.1, no changes needed.
+-
+-  [ Boian Bonev ]
+-  * Update standards version to 4.6.2, no changes needed.
+-  * Update to new upstream release of 1.23
+-  * Fix d/watch
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Tue, 24 Jan 2023 00:00:31 +0000
+-
+-iotop-c (1.22-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.22
+-  * Update standards to 4.6.1, no changes
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Sat, 09 Jul 2022 23:54:01 +0000
+-
+-iotop-c (1.21-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.21
+-    - Better support for disabled task_delayacct sysctl
+-    - Add history and graph for all data
+-    - Restore simple inline help
+-  * Remove filenamemangle from d/watch
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Wed, 26 Jan 2022 15:20:46 +0000
+-
+-iotop-c (1.20-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.20
+-    - Add support for kernel 5.14+ task_delayacct sysctl
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Mon, 04 Oct 2021 23:56:24 +0000
+-
+-iotop-c (1.19-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.19
+-    - Do not crash if TERM is not set
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Tue, 21 Sep 2021 08:30:10 +0000
+-
+-iotop-c (1.18-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.18
+-  * Update standards to 4.6.0
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Tue, 24 Aug 2021 02:45:57 +0000
+-
+-iotop-c (1.17-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.17
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Sat, 06 Feb 2021 01:02:03 +0000
+-
+-iotop-c (1.16-1) unstable; urgency=medium
+-
+-  * Update standards to 4.5.1
+-  * Update to new upstream release of 1.16
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Mon, 25 Jan 2021 05:01:28 +0000
+-
+-iotop-c (1.15-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.15
+-    - fix read return value converted to unsugned (and possible OOB in the rare
+-      case that happens
+-    - fix keypress ignored during screen refresh
+-    - fix Ctrl-L to really redraw screen
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Wed, 30 Sep 2020 14:49:57 +0000
+-
+-iotop-c (1.14-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.12
+-    - fix SIGSEGV in humanize_val on large values
+-    - convert the pseudo-graph to a normal column
+-    - remove option -s (replaced by -8 with inverse logic)
+-    - add sort by the pseudo-graph column
+-    - make sort by the pseudo-graph the default
+-    - implement hiding columns by options and shortcuts 1...9
+-    - revise column widths
+-    - rewrite curses event loop to make data collection separate from refresh
+-    - fix sorting (proper double value comparison)
+-  * Update to new upstream release of 1.14
+-    - fix off-by-one errors in size calculation to avoid truncated strings
+-    - unify snprintf usage according to glibc semantics
+-    - keep both variants of cmdline in memory for immediate display change
+-      (hotkey c)
+-    - rewrite get_vm_counters with simpler io
+-    - nuke the remnants of -s/--iohistory options
+-    - be more strict to unrecognized arguments
+-  * Remove debian folder from release tarballs (lintian: no-debian-changes)
+-  * Change release tarballs url in debian/watch
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Thu, 24 Sep 2020 00:28:13 +0000
+-
+-iotop-c (1.11-1) unstable; urgency=medium
+-
+-  * Update to new upstream release of 1.10
+-    - add pseudo graphs for total IO activity
+-    - add detection of UTF support, fallback to ASCII
+-    - add shortcut to toggle UTF/ASCII
+-    - improve build checks for printf-like ncurses API
+-  * Convert alternatives to debhelper instead of shell scripts
+-  * Add debian/upstream/metadata
+-  * Update to new upstream release of 1.11
+-    - better detection of locale/terminal
+-    - add graph and UTF/ASCII toggles to help
+-    - increase history to 60 datapoints
+-    - make graphs scale as screen size changes
+-    - always keep track of history data (graph display toggle no
+-      longer affects the data collected)
+-    - use the history data as 'only' filter in interactive mode
+-  * Add build-dep on pkg-config
+-  * wrap-and-sort in the proper way
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Wed, 02 Sep 2020 20:41:00 +0300
+-
+-iotop-c (1.9-1) unstable; urgency=medium
+-
+-  * Add Vcs-* tags
+-  * Update to new upstream release of 1.9
+-  * Bump debhelper-compat to 13
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Sat, 22 Aug 2020 02:10:44 +0000
+-
+-iotop-c (1.8-1) unstable; urgency=medium
+-
+-  * Initial release (Closes: #963612)
+-
+- -- Boian Bonev <bbonev@ipacct.com>  Thu, 02 Jul 2020 09:20:46 +0000
+diff --git a/./debian/control b/./debian/control
+deleted file mode 100644
+index 77c7f47..0000000
+--- a/./debian/control
++++ /dev/null
+@@ -1,37 +0,0 @@
+-Source: iotop-c
+-Section: admin
+-Priority: optional
+-Maintainer: Boian Bonev <bbonev@ipacct.com>
+-Build-Depends:
+- debhelper-compat (= 13),
+- libncurses-dev,
+- pkg-config,
+-Standards-Version: 4.6.2
+-Rules-Requires-Root: no
+-Homepage: https://github.com/Tomas-M/iotop
+-Vcs-Browser: https://github.com/Tomas-M/iotop
+-Vcs-Git: https://github.com/Tomas-M/iotop.git
+-
+-Package: iotop-c
+-Architecture: linux-any
+-Depends:
+- ${misc:Depends},
+- ${shlibs:Depends},
+-Replaces:
+- iotop (<= 0.6-24-g733f3f8-1),
+-Breaks:
+- iotop (<= 0.6-24-g733f3f8-1),
+-Description: simple top-like I/O monitor (implemented in C)
+- iotop-c does for I/O usage what top(1) does for CPU usage. It watches I/O
+- usage information output by the Linux kernel and displays a table of
+- current I/O usage by processes on the system. It is handy for answering
+- the question "Why is the disk churning so much?".
+- .
+- iotop-c requires a Linux kernel built with the CONFIG_TASKSTATS,
+- CONFIG_TASK_DELAY_ACCT, CONFIG_TASK_IO_ACCOUNTING and
+- CONFIG_VM_EVENT_COUNTERS config options on.
+- .
+- iotop-c is an alternative re-implementation of iotop in C, optimized for
+- performance. Normally a monitoring tool intended to be used on a system
+- under heavy stress should use the least additional resources as
+- possible.
+diff --git a/./debian/copyright b/./debian/copyright
+deleted file mode 100644
+index 7036145..0000000
+--- a/./debian/copyright
++++ /dev/null
+@@ -1,30 +0,0 @@
+-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+-Upstream-Name: iotop-c
+-Upstream-Contact: Boian Bonev <bbonev@ipacct.com>
+-Source: https://github.com/Tomas-M/iotop
+-
+-Files: *
+-Copyright: 2014 Vyacheslav Trushkin
+-           2020-2024 Boian Bonev <bbonev@ipacct.com>
+-License: GPL-2.0+
+-
+-Files: debian/*
+-Copyright: 2020-2024 Boian Bonev <bbonev@ipacct.com>
+-License: GPL-2.0+
+-
+-License: GPL-2.0+
+- This package is free software; you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation; either version 2 of the License, or
+- (at your option) any later version.
+- .
+- This package is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- GNU General Public License for more details.
+- .
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>
+- .
+- On Debian systems, the complete text of the GNU General
+- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+diff --git a/./debian/iotop-c.alternatives b/./debian/iotop-c.alternatives
+deleted file mode 100644
+index 9492e05..0000000
+--- a/./debian/iotop-c.alternatives
++++ /dev/null
+@@ -1,7 +0,0 @@
+-Name: iotop
+-Link: /usr/sbin/iotop
+-Alternative: /usr/sbin/iotop-c
+-Dependents:
+-  /usr/share/man/man8/iotop.8.gz iotop.8.gz /usr/share/man/man8/iotop-c.8.gz
+-Priority: 40
+-
+diff --git a/./debian/rules b/./debian/rules
+deleted file mode 100755
+index d23ef0e..0000000
+--- a/./debian/rules
++++ /dev/null
+@@ -1,19 +0,0 @@
+-#!/usr/bin/make -f
+-
+-# use the default Debian build options; do not strip as dh_* scripts strip the binary
+-export NO_FLTO=1
+-export STRIP=/bin/true
+-ifeq (,$(filter terse,$(DEB_BUILD_OPTIONS)))
+-export V=1
+-else
+-export V=0
+-endif
+-export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+-
+-%:
+-	dh $@
+-
+-override_dh_install:
+-	dh_install
+-	mv debian/iotop-c/usr/sbin/iotop debian/iotop-c/usr/sbin/iotop-c
+-	mv debian/iotop-c/usr/share/man/man8/iotop.8 debian/iotop-c/usr/share/man/man8/iotop-c.8
+diff --git a/./debian/source/format b/./debian/source/format
+deleted file mode 100644
+index 163aaf8..0000000
+--- a/./debian/source/format
++++ /dev/null
+@@ -1 +0,0 @@
+-3.0 (quilt)
+diff --git a/./debian/upstream/metadata b/./debian/upstream/metadata
+deleted file mode 100644
+index 4893ae2..0000000
+--- a/./debian/upstream/metadata
++++ /dev/null
+@@ -1,5 +0,0 @@
+----
+-Bug-Database: https://github.com/Tomas-M/iotop/issues
+-Bug-Submit: https://github.com/Tomas-M/iotop/issues/new
+-Repository: https://github.com/Tomas-M/iotop.git
+-Repository-Browse: https://github.com/Tomas-M/iotop/
+diff --git a/./debian/upstream/signing-key.asc b/./debian/upstream/signing-key.asc
+deleted file mode 100644
+index 93d3a0c..0000000
+--- a/./debian/upstream/signing-key.asc
++++ /dev/null
+@@ -1,164 +0,0 @@
+------BEGIN PGP PUBLIC KEY BLOCK-----
+-
+-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
+-=8Zh6
+------END PGP PUBLIC KEY BLOCK-----
+diff --git a/./debian/watch b/./debian/watch
+deleted file mode 100644
+index 3dda4a4..0000000
+--- a/./debian/watch
++++ /dev/null
+@@ -1,6 +0,0 @@
+-version=4
+-
+-opts="searchmode=plain, \
+-	pgpsigurlmangle=s/releases\/download\/v([0-9.]+)\/iotop-([0-9.]+)\.tar\.xz/releases\/download\/v$1\/iotop-$1\.tar\.xz\.asc/" \
+-	https://api.github.com/repos/Tomas-M/iotop/releases \
+-	https://github.com/Tomas-M/iotop/releases/download/v\d[\.\d]*/iotop-@ANY_VERSION@.tar.xz
+diff --git a/./fedora/iotop-c.spec b/../../rpms/iotop-c/iotop-1.25/fedora/iotop-c.spec
+index 2d38c09..c08bec3 100644
+--- a/./fedora/iotop-c.spec
++++ b/../../rpms/iotop-c/iotop-1.25/fedora/iotop-c.spec
+@@ -1,5 +1,5 @@
+ Name:           iotop-c
+-Version:        1.26
++Version:        1.25
+ Release:        1%{?dist}
+ Summary:        Simple top-like I/O monitor (implemented in C)
+ 
+@@ -9,9 +9,6 @@ Source0:        https://github.com/Tomas-M/iotop/releases/download/v%{version}/i
+ Source1:        https://github.com/Tomas-M/iotop/releases/download/v%{version}/iotop-%{version}.tar.xz.asc
+ Source2:        https://raw.githubusercontent.com/Tomas-M/iotop/v%{version}/debian/upstream/signing-key.asc
+ 
+-Provides:       iotop
+-Obsoletes:      iotop < 0.7
+-
+ BuildRequires:  gcc
+ BuildRequires:  gnupg2
+ BuildRequires:  ncurses-devel
+@@ -45,27 +42,16 @@ NO_FLTO=1 %make_build
+ 
+ %install
+ V=1 STRIP=: %make_install
++mv %{buildroot}%{_sbindir}/iotop %{buildroot}%{_sbindir}/iotop-c
++mv %{buildroot}%{_mandir}/man8/iotop.8 %{buildroot}%{_mandir}/man8/iotop-c.8
+ 
+ %files
+ %license COPYING
+ %license LICENSE
+-%{_sbindir}/iotop
+-%{_mandir}/man8/iotop.8*
++%{_sbindir}/iotop-c
++%{_mandir}/man8/iotop-c.8*
+ 
+ %changelog
+-* Sat 03 Feb 2024 Boian Bonev <bbonev@ipacct.com> - 1.26-1
+-- Update to latest ver 1.26
+-
+-* Thu Feb 01 2024 Michal Hlavinka <mhlavink@redhat.com> - 1.25-4
+-- replace iotop https://fedoraproject.org/wiki/Changes/Replace_iotop_with_iotop-c
+-- iotop-c executable renamed back to iotop
+-
+-* Wed Jan 24 2024 Fedora Release Engineering <releng@fedoraproject.org> - 1.25-3
+-- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+-
+-* Sat Jan 20 2024 Fedora Release Engineering <releng@fedoraproject.org> - 1.25-2
+-- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+-
+ * Sat Oct 14 2023 Boian Bonev <bbonev@ipacct.com> - 1.25-1
+ - Update to latest ver 1.25
+ 
+diff --git a/./glibcvertest.h b/../../rpms/iotop-c/iotop-1.25/glibcvertest.h
+index 1543de6..1aa2e0b 100644
+--- a/./glibcvertest.h
++++ b/../../rpms/iotop-c/iotop-1.25/glibcvertest.h
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./iotop.8 b/../../rpms/iotop-c/iotop-1.25/iotop.8
+index 8c7e53b..efb7cb1 100644
+--- a/./iotop.8
++++ b/../../rpms/iotop-c/iotop-1.25/iotop.8
+@@ -1,4 +1,4 @@
+-.TH IOTOP "8" "January 22, 2024"
++.TH IOTOP "8" "January 22, 2023"
+ .SH NAME
+ iotop \- simple top\-like I/O monitor
+ .SH SYNOPSIS
+@@ -284,12 +284,6 @@ Do not colorize values
+ Colorize values. This will override the effect of the environment variable
+ \fBNO_COLOR\fR when explicitly specified on the command line.
+ .TP
+-\fB\-T\fR, \fB\-\-hide\-time\fR
+-Do not show time clock in upper right corner
+-.TP
+-\fB\-\-show\-time\fR
+-Show time clock in upper right corner
+-.TP
+ \fB\-\-si\fR
+ Use SI units of \fB1000\fR when printing values. The default is non\-SI
+ \fB1024\fR
+@@ -404,9 +398,6 @@ background
+ \fBe\fR, \fBE\fR
+ Toggle the display of exited processes
+ .TP
+-\fBT\fR
+-Toggle the display of time clock in upper right corner
+-.TP
+ \fBs\fR, \fBS\fR
+ Toggle freeze of data collection
+ .TP
+@@ -493,7 +484,7 @@ empty string, all color output is suppressed.
+ The original Python iotop implementation was written by Guillaume Chazarain.
+ This rewrite in C was started in 2014 by Vyacheslav Trushkin and reworked to
+ include all missing features from the original Python code and several new ones
+-from 2020 to 2024 by Boian Bonev.
++from 2020 to 2023 by Boian Bonev.
+ .PP
+ This manual page was started by Paul Wise for the Debian project and is placed
+ in the public domain.
+diff --git a/./src/arr.c b/../../rpms/iotop-c/iotop-1.25/src/arr.c
+index 9cfb2f4..51fd62e 100644
+--- a/./src/arr.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/arr.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/checks.c b/../../rpms/iotop-c/iotop-1.25/src/checks.c
+index 4e81abb..494936e 100644
+--- a/./src/checks.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/checks.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/configfile.c b/../../rpms/iotop-c/iotop-1.25/src/configfile.c
+index 1b5ed82..e91f1ea 100644
+--- a/./src/configfile.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/configfile.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+@@ -20,8 +20,7 @@ You should have received a copy of the GNU General Public License along with thi
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ 
+-#define CONFIG_DIR1 "/.config"
+-#define CONFIG_DIR2 "/iotop"
++#define CONFIG_PATH "/.config/iotop"
+ #define CONFIG_NAME "/iotoprc"
+ #define MAX_OPT 50
+ 
+@@ -49,25 +48,15 @@ static inline void mkdir_p(const char *dir) {
+ 
+ static inline FILE *config_file_open(const char *mode) {
+ 	char path[PATH_MAX];
+-	char *xdgconfig;
+ 	char *home;
+ 
+-	xdgconfig=getenv("XDG_CONFIG_HOME");
+ 	home=getenv("HOME");
++	if (!home)
++		home="";
+ 
+-	if (xdgconfig) {
+-		strcpy(path,xdgconfig);
+-		strcat(path,CONFIG_DIR2);
+-		mkdir_p(path);
+-	} else {
+-		if (home)
+-			strcpy(path,home);
+-		else
+-			strcpy(path,"");
+-		strcat(path,CONFIG_DIR1);
+-		strcat(path,CONFIG_DIR2);
+-		mkdir_p(path);
+-	}
++	strcpy(path,home);
++	strcat(path,CONFIG_PATH);
++	mkdir_p(path);
+ 	strcat(path,CONFIG_NAME);
+ 
+ 	return fopen(path,mode);
+@@ -258,9 +247,6 @@ inline int config_file_save(void) {
+ 	// --ascii
+ 	if (!config.f.unicode)
+ 		fprintf(cf,"--ascii\n");
+-	// --hide-time
+-	if (config.f.hideclock)
+-		fprintf(cf,"--hide-time\n");
+ 
+ 	fclose(cf);
+ 
+diff --git a/./src/delayacct.c b/../../rpms/iotop-c/iotop-1.25/src/delayacct.c
+index a7b0110..99516e6 100644
+--- a/./src/delayacct.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/delayacct.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/ioprio.c b/../../rpms/iotop-c/iotop-1.25/src/ioprio.c
+index 83f5e72..98409c0 100644
+--- a/./src/ioprio.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/ioprio.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/iotop.h b/../../rpms/iotop-c/iotop-1.25/src/iotop.h
+index 74cde0b..0048a59 100644
+--- a/./src/iotop.h
++++ b/../../rpms/iotop-c/iotop-1.25/src/iotop.h
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+@@ -27,7 +27,7 @@ You should have received a copy of the GNU General Public License along with thi
+ #include <sys/types.h>
+ #include <stdint.h>
+ 
+-#define VERSION "1.26"
++#define VERSION "1.25"
+ 
+ typedef enum {
+ 	E_GR_IO,
+@@ -62,7 +62,6 @@ typedef union {
+ 		int hideexited;
+ 		int nocolor;
+ 		int reverse_graph;
+-		int hideclock;
+ 		int accumbw;
+ 		int unicode; // this and below are not part of opts
+ 		e_grtype grtype;
+@@ -72,7 +71,7 @@ typedef union {
+ 		int base; // 1000 or 1024
+ 		int threshold; // 1..10
+ 	} f;
+-	int opts[23];
++	int opts[22];
+ } config_t;
+ 
+ typedef struct {
+diff --git a/./src/main.c b/../../rpms/iotop-c/iotop-1.25/src/main.c
+index 704955d..b3dc9bd 100644
+--- a/./src/main.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/main.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+@@ -47,7 +47,6 @@ You should have received a copy of the GNU General Public License along with thi
+ #define OPT_UNICODE 0x115
+ #define OPT_COLOR 0x116
+ #define OPT_NO_ACCUM_BW 0x117
+-#define OPT_SHOW_TIME 0x118
+ 
+ static const char *progname=NULL;
+ int maxpidlen=5;
+@@ -66,7 +65,7 @@ inline void init_params(void) {
+ 	params.user_id=-1;
+ }
+ 
+-static const char str_opt[]="boPaktqc123456789xelRTA";
++static const char str_opt[]="boPaktqc123456789xelRA";
+ 
+ static inline void print_help(void) {
+ 	printf(
+@@ -129,8 +128,6 @@ static inline void print_help(void) {
+ 		"      --show-exited      show exited processes\n"
+ 		"  -l, --no-color         do not colorize values\n"
+ 		"      --color            colorize values\n"
+-		"  -T, --hide-time        hide current time\n"
+-		"      --show-time        show current time\n"
+ 		"      --si               use SI units of 1000 when printing values\n"
+ 		"      --no-si            use non-SI units of 1024 when printing values\n"
+ 		"      --threshold=1..10  threshold to switch to next unit\n"
+@@ -214,8 +211,6 @@ static inline void parse_args(int clac,char **clav) {
+ 				{"show-graph",no_argument,NULL,OPT_SHOW_GRAPH},
+ 				{"hide-command",no_argument,NULL,'9'},
+ 				{"show-command",no_argument,NULL,OPT_SHOW_CMD},
+-				{"hide-time",no_argument,NULL,'T'},
+-				{"show-time",no_argument,NULL,OPT_SHOW_TIME},
+ 				{"dead-x",no_argument,NULL,'x'},
+ 				{"no-dead-x",no_argument,NULL,OPT_NO_DEADX},
+ 				{"hide-exited",no_argument,NULL,'e'},
+@@ -234,7 +229,7 @@ static inline void parse_args(int clac,char **clav) {
+ 				{NULL,0,NULL,0}
+ 			};
+ 
+-			int c=getopt_long(argc,argv,"boPaktqc123456789xelRTAn:d:p:u:g:H:vhW",long_options,NULL);
++			int c=getopt_long(argc,argv,"vhbon:d:p:u:Paktqc123456789xelRg:H:WA",long_options,NULL);
+ 
+ 			if (c==-1) {
+ 				if (optind<argc) {
+@@ -289,7 +284,6 @@ static inline void parse_args(int clac,char **clav) {
+ 				case 'e':
+ 				case 'l':
+ 				case 'R':
+-				case 'T':
+ 				case_opt:
+ 					config.opts[(unsigned int)(strchr(str_opt,c)-str_opt)]=1;
+ 					break;
+@@ -414,9 +408,6 @@ static inline void parse_args(int clac,char **clav) {
+ 				case OPT_NO_ACCUM_BW:
+ 					config.f.accumbw=0;
+ 					break;
+-				case OPT_SHOW_TIME:
+-					config.f.hideclock=0;
+-					break;
+ 				default:
+ 					exit(EXIT_FAILURE);
+ 			}
+diff --git a/./src/ucell.c b/../../rpms/iotop-c/iotop-1.25/src/ucell.c
+index 260cb7d..327b188 100644
+--- a/./src/ucell.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/ucell.c
+@@ -1,6 +1,6 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/ucell.h b/../../rpms/iotop-c/iotop-1.25/src/ucell.h
+index 1156bb0..f7b205d 100644
+--- a/./src/ucell.h
++++ b/../../rpms/iotop-c/iotop-1.25/src/ucell.h
+@@ -1,6 +1,6 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/utils.c b/../../rpms/iotop-c/iotop-1.25/src/utils.c
+index bdc6017..3d47e9e 100644
+--- a/./src/utils.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/utils.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/view_batch.c b/../../rpms/iotop-c/iotop-1.25/src/view_batch.c
+index 9e03cc4..62dc3b8 100644
+--- a/./src/view_batch.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/view_batch.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/view_curses.c b/../../rpms/iotop-c/iotop-1.25/src/view_curses.c
+index 6e81e89..c2334e4 100644
+--- a/./src/view_curses.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/view_curses.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+@@ -18,7 +18,6 @@ You should have received a copy of the GNU General Public License along with thi
+ #define GCC_PRINTF
+ 
+ #include <pwd.h>
+-#include <time.h>
+ #include <regex.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -170,7 +169,6 @@ static char tasci[200]="Toggle using Unicode/ASCII characters [Unicode]";
+ static char tcolr[200]="Toggle colorizing values [off]";
+ static char txxxi[200]="Toggle exited processes xxx/inverse [inverse]";
+ static char texit[200]="Toggle showing exited processes [off]";
+-static char tcloc[200]="Toggle showing time clock [on]";
+ static char tfrez[200]="Toggle data freeze [off]";
+ static char units[200]="Toggle SI units [1024]";
+ static char unitt[200]="Cycle unit threshold [10]";
+@@ -213,7 +211,6 @@ const s_helpitem thelp[]={
+ 	{.descr=tcolr,.t="Toggle colorizing values [%s]",.k2="l",.k3="L"},
+ 	{.descr=txxxi,.t="Toggle exited processes xxx/inverse [%s]",.k2="x",.k3="X"},
+ 	{.descr=texit,.t="Toggle showing exited processes [%s]",.k2="e",.k3="E"},
+-	{.descr=tcloc,.t="Toggle showing time clock [%s]",.k2="T"},
+ 	{.descr=tfrez,.t="Toggle data freeze [%s]",.k2="s",.k3="S"},
+ 	{.descr=units,.t="Toggle SI units [%d]",.k1="<Ctrl-B>",.k2="b",.k3=""},
+ 	{.descr=unitt,.t="Cycle unit threshold [%d]",.k1="<Ctrl-R>",.k2="t",.k3=""},
+@@ -516,10 +513,9 @@ static inline void view_help(void) {
+ 					sprintf(p->descr,p->t,!config.f.hidecmd?"on":"off");
+ 					break;
+ 				case 'g': {
+-					char *grt;
++					char *grt="";
+ 
+ 					switch (config.f.grtype) {
+-						default:
+ 						case E_GR_IO:
+ 							grt="IO";
+ 							break;
+@@ -564,11 +560,8 @@ static inline void view_help(void) {
+ 				case 't':
+ 					sprintf(p->descr,p->t,config.f.threshold);
+ 					break;
+-				case 'T':
+-					sprintf(p->descr,p->t,config.f.hideclock?"off":"on");
+-					break;
+ 				case 0: { // only task_delayacct has no key
+-					char *tda;
++					char *tda="";
+ 
+ 					if (has_task_delayacct())
+ 						tda=read_task_delayacct()?"dynamic on":"dynamic off";
+@@ -884,15 +877,13 @@ static inline void view_curses(struct xxxid_stats_arr *cs,struct xxxid_stats_arr
+ 	}
+ 	attroff(A_REVERSE);
+ 
+-	if ((dontrefresh||!has_tda||!config.f.hideclock)&&(maxx-maxcmdline+(config.f.hidecmd?0:strlen(COLUMN_L(0))+1)<(size_t)maxx)) {
++	if ((dontrefresh||!has_tda)&&(maxx-maxcmdline+(config.f.hidecmd?0:strlen(COLUMN_L(0))+1)<(size_t)maxx)) {
+ 		size_t xpos=maxx;
+ 
+ 		if (!has_tda)
+ 			xpos-=strlen("[T]");
+ 		if (dontrefresh)
+ 			xpos-=strlen("[frozen]");
+-		if (!config.f.hideclock)
+-			xpos-=strlen("(00:00:00)");
+ 
+ 		// don't step on column descriptions
+ 		if (xpos<maxx-maxcmdline+(config.f.hidecmd?0:strlen(COLUMN_L(0))+1))
+@@ -906,18 +897,6 @@ static inline void view_curses(struct xxxid_stats_arr *cs,struct xxxid_stats_arr
+ 		}
+ 		if (dontrefresh)
+ 			mvprintw(ionice_line+1,xpos+(has_tda?0:strlen("[T]")),"[frozen]");
+-		if (!config.f.hideclock) {
+-			time_t t=time(NULL);
+-			struct tm *tm;
+-			char ts[20];
+-
+-			tm=localtime(&t);
+-			if (strftime(ts,sizeof ts,"(%H:%M:%S)",tm)==0)
+-				strcpy(ts,"( error! )");
+-			attron(A_REVERSE);
+-			mvprintw(ionice_line+1,xpos+(has_tda?0:strlen("[T]"))+(dontrefresh?strlen("[frozen]"):0),"%s",ts);
+-			attroff(A_REVERSE);
+-		}
+ 	}
+ 	// easiest place to print debug info
+ 	//mvprintw(ionice_line+1,maxx-maxcmdline+strlen(COLUMN_L(0))+1," ... ",...);
+@@ -2144,9 +2123,6 @@ static inline int curses_key(int ch) {
+ 		case 'X':
+ 			config.f.deadx=!config.f.deadx;
+ 			break;
+-		case 'T':
+-			config.f.hideclock=!config.f.hideclock;
+-			break;
+ 		case KEY_ESCAPE: // ESC
+ 			nocbreak();
+ 			k2=getch();
+@@ -2451,9 +2427,6 @@ inline void view_curses_loop(void) {
+ 			get_vm_counters(&act.read_bytes,&act.write_bytes);
+ 			act.ts_c=now;
+ 			refresh=1;
+-		} else if (bef+1000*params.delay<now&&dontrefresh&&!config.f.hideclock) {
+-			bef=now;
+-			refresh=1;
+ 		}
+ 		if (refresh&&k==ERR)
+ 			k=KEY_REFRESH;
+diff --git a/./src/views.c b/../../rpms/iotop-c/iotop-1.25/src/views.c
+index 1e51b89..78bc076 100644
+--- a/./src/views.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/views.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/vmstat.c b/../../rpms/iotop-c/iotop-1.25/src/vmstat.c
+index 5bdadb1..caba1e6 100644
+--- a/./src/vmstat.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/vmstat.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 
+diff --git a/./src/xxxid_info.c b/../../rpms/iotop-c/iotop-1.25/src/xxxid_info.c
+index 945eb3b..9fa85d4 100644
+--- a/./src/xxxid_info.c
++++ b/../../rpms/iotop-c/iotop-1.25/src/xxxid_info.c
+@@ -1,7 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ Copyright (C) 2014  Vyacheslav Trushkin
+-Copyright (C) 2020-2024  Boian Bonev
++Copyright (C) 2020-2023  Boian Bonev
+ 
+ This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ 

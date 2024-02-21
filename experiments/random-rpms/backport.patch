@@ -1,0 +1,16 @@
+--- a/src/configfile.c	2024-02-21 15:15:47.059427380 +0000
++++ b/src/configfile.c	2024-02-21 15:15:47.181429545 +0000
+@@ -54,10 +54,10 @@
+ 	if (!home)
+ 		home="";
+ 
+-	strcpy(path,home);
+-	strcat(path,CONFIG_PATH);
++	strncpy(path,home,  PATH_MAX-1) );
++	strncat(path,CONFIG_PATH,  PATH_MAX-strlen(path)-1) );
+ 	mkdir_p(path);
+-	strcat(path,CONFIG_NAME);
++	strncat(path,CONFIG_NAME,  PATH_MAX-strlen(path)-1) );
+ 
+ 	return fopen(path,mode);
+ }

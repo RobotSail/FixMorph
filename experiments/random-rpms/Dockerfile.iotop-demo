@@ -77,7 +77,7 @@ RUN printf 'path_a:%s\npath_b:%s\npath_c:%s\nconfig_command_a:%s\nconfig_command
     "${BUILD_COMMAND_B}" \
     "${BUILD_COMMAND_C}" > /opt/fixmorph/repair.conf
 
-COPY run.sh ./cmd
+COPY run-demo.sh ./cmd
 RUN chmod +x ./cmd
 
 CMD [ "./cmd" ]

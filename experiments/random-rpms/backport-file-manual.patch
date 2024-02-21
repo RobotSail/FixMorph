@@ -1,0 +1,18 @@
+diff --git a/src/configfile.c b/src/configfile.c
+index e91f1ea..2d08e6a 100644
+--- a/src/configfile.c
++++ b/src/configfile.c
+@@ -54,10 +54,10 @@ static inline FILE *config_file_open(const char *mode) {
+ 	if (!home)
+ 		home="";
+ 
+-	strcpy(path,home);
+-	strcat(path,CONFIG_PATH);
++	strncpy(path,home, PATH_MAX - 1);
++	strncat(path,CONFIG_PATH, PATH_MAX - (strlen(path) + 1));
+ 	mkdir_p(path);
+-	strcat(path,CONFIG_NAME);
++	strncat(path,CONFIG_NAME, PATH_MAX - (strlen(path) + 1));
+ 
+ 	return fopen(path,mode);
+ }
