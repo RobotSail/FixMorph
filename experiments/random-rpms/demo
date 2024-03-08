@@ -61,7 +61,7 @@ function remove_untracked_files() {
     local repo_path="${1}"
     git -C "rpms/iotop-c/iotop-1.25" ls-files --others --exclude-standard | while read -r file; do
         local filepath="${repo_path}/${file}"
-        printf 'deleting file at path %s\n' "${filepath}"
+        # printf 'deleting file at path %s\n' "${filepath}" 
         rm -f "${filepath}"
     done
 }
@@ -70,12 +70,12 @@ function reset_repositories() {
     local upstream_name=$(basename "${UPSTREAM_DIR}")
     local downstream_name=$(basename "${DOWNSTREAM_DIR}")
     # printf '[%s, upstream] Resetting repository to HEAD\n' "${upstream_name}"
-    printf '[upstream] ' "$(basename ${UPSTREAM_DIR})"
-    git -C "${UPSTREAM_DIR}" reset HEAD --hard 
+    # printf '[upstream] ' "$(basename ${UPSTREAM_DIR})"
+    git -C "${UPSTREAM_DIR}" reset HEAD --hard &> /dev/null
     remove_untracked_files "${UPSTREAM_DIR}"
     # printf '[%s, downstream] Resetting repository to HEAD\n' "${upstream_name}"
-    printf '[downstream] ' "$(basename ${DOWNSTREAM_DIR})"
-    git -C "${DOWNSTREAM_DIR}" reset HEAD --hard
+    # printf '[downstream] ' "$(basename ${DOWNSTREAM_DIR})"
+    git -C "${DOWNSTREAM_DIR}" reset HEAD --hard &> /dev/null
     remove_untracked_files "${DOWNSTREAM_DIR}"
 
 }
